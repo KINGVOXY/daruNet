@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <title>status - DaruNet</title>
+    {{ head }}
+</head>
+
+<body>
+    <div class="content" id="snap">
+
+        {{ header }}
+
+        <main>
+            <h2><i class="fa-solid fa-chart-line"></i> Host Status</h2>
+            <div class="box" id="cv-status-p">
+                <canvas id="statusChart"></canvas>
+            </div>
+        </main>
+        
+        {{ footer }}
+    </div>
+
+    {{ scripts }}
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.5.1/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-streaming@latest/dist/chartjs-plugin-streaming.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/protonet-jquery.inview/1.1.2/jquery.inview.min.js"></script>
+    <script src="/views/assets/scripts/statusChart.js"></script>
+</body>
+
+</html>

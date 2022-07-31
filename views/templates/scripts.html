@@ -1,0 +1,51 @@
+<div class="nav-wrap">
+    <div class="nav nav-left">
+        <ul>
+            <li><a href="/"><i class="fa-solid fa-house"></i> Top</a></li>
+        </ul>
+    </div>
+
+</div>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<script src="/views/assets/scripts/snap.min.js"></script>
+<script>
+        var snapper = new Snap({
+            element: document.getElementById('snap'), //左右にスライドされる要素のID
+            dragger: document.getElementById('drag'), //左右にスライドするための使用される要素
+            disable: 'right', //右か左どちらか動かさないほうを指定できる
+            addBodyClasses: false, //開かれている側を示すためにbodyにクラスを追加する
+            transitionSpeed: 0.5, //スライドの開閉速度を指定
+            easing: 'ease', //イージングを指定
+            maxPosition: 266, //スライドさせる最大幅
+            minPosition: -266, //スライドさせる最小幅
+            tapToClose: false, //空白クリックで閉じる
+            touchToDrag: false, //スワイプを有効化
+        });
+
+        var addEvent = function addEvent(element, eventName, func) {
+            if (!element) { return false; }
+            if (element.addEventListener) {
+                return element.addEventListener(eventName, func, false);
+            } else if (element.attachEvent) {
+                return element.attachEvent("on" + eventName, func);
+            }
+        };
+
+        const openLeft = "#open-left"
+        const closeM = "#close"
+        //クリックで左が開く
+        addEvent(document.getElementById('open-left'), 'click', function () {
+            $(openLeft).css("display", "none");
+            $(closeM).css("display", "block");
+            snapper.open('left');
+        });
+
+        //クリックで閉じる
+        addEvent(document.getElementById('close'), 'click', function () {
+            $(closeM).css("display", "none");
+            $(openLeft).css("display", "block");
+            snapper.close();
+        });
+</script>

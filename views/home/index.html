@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ja">
+    
+    <head>
+        <title>index - DaruNet</title>
+        {{ head }}
+    </head>
+
+    <body>
+        <div class="content" id="snap">
+
+            {{ header }}
+            
+            <main>
+                <div class="w-info container">
+                    <div class="info">電源に蝉が入ったためHost5が動作を停止しました。</div>
+                </div>
+                <h2><i class="fa-solid fa-cubes"></i> Hosts</h2>
+                <ul class="host-index container">
+                    <a href="/">
+                    <li class="host">
+                        <div class="name"><i class="fa-solid fa-cube"></i> sakura</div>
+                        <div class="d-flex">
+                            <div class="ip">xxx.xxxxx.jp</div>
+                            <div class="stats online"><p>稼働中</p> <i class="fa-solid fa-circle"></i></div>
+                        </div>
+                    </li>
+                    </a>
+                    <a href="/">
+                    <li class="host">
+                        <div class="name"><i class="fa-solid fa-cube"></i> laptop</div>
+                        <div class="d-flex">
+                            <div class="ip">192.168.2.113</div>
+                            <div class="stats offline"><p>停止</p> <i class="fa-solid fa-circle"></i></div>
+                        </div>
+                    </li>
+                    </a>
+                    <a href="/">
+                    <li class="host">
+                        <div class="name"><i class="fa-solid fa-cube"></i> rpi</div>
+                        <div class="d-flex">
+                            <div class="ip">192.168.2.114</div>
+                            <div class="stats offline"><p>停止</p> <i class="fa-solid fa-circle"></i></div>
+                        </div>
+                    </li>
+                    </a>
+                </ul>
+            </main>
+            
+            {{ footer }}
+        </div>
+
+        {{ scripts }}
+
+    </body>
+</html>

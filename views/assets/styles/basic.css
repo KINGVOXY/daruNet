@@ -1,0 +1,114 @@
+html, body, .content {
+    margin: 0;
+    height: 100%;
+    background-color: #36393f;
+}
+
+main {
+    margin: 0 auto;
+    margin-top: 70px;
+    width: 60%;
+    min-height: calc(100% - 70px - 70px);
+    color: rgb(239, 241, 245);
+    text-align: left;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    padding-top: 1em;
+    padding-left: 1em;
+}
+
+h1, h2, h3 {
+    border-bottom: solid 2px orange;
+}
+
+.d-flex {
+    display: flex;
+}
+
+.container {
+    margin: 1em auto;
+    width: 95%;
+}
+
+.w-info {
+    margin: auto;
+    padding-top: 1em;
+    font-size: .9em;
+}
+.info {
+    border-radius: 9px;
+    background-color: rgb(224, 72, 72);
+    padding: 15px;
+}
+
+
+.host-index .host {
+    background-color: #2f3136;
+    padding: 18px 16px;
+    margin: .5em 0;
+    border-radius: 9px;
+}
+
+.host-index>.host .name {
+    font-weight: bold;
+}
+
+.host-index .ip,
+.host-index .stats {
+    font-size: .7rem;
+}
+
+.host-index .stats.offline > i {
+    color: rgb(224, 72, 72);
+}
+
+.host-index .stats.online > i {
+    color: rgb(52, 231, 147);
+}
+
+.host-index .stats {
+    margin: auto;
+    margin-right: 0;
+}
+
+.host-index .stats > p {
+    display: inline;
+    opacity: .7;
+}
+
+.host-index .ip {
+    margin-left: 1.7em;
+    opacity: .7;
+}
+
+.host-index a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.box {
+    padding: 20px 0;
+    margin: 1em auto;
+    width: calc(60vw * 0.95);
+    height: calc(60vw * 0.95 / 2);
+    max-height: 250px;
+    background: #212224;
+    text-align: center;
+}
+
+canvas {
+    margin: auto !important;
+    width: 97% !important;
+    height: 100%;
+}
+
+@media screen and (max-width: 480px) {
+    main {
+        width: 90%;
+    }
+    .box {
+        width: calc(90vw * 0.95);
+        height: calc(90vw * 0.95 / 2);
+    }
+}
